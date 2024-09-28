@@ -1,0 +1,352 @@
+@font-face {
+  font-family: RedHat;
+  src: url("assets/fonts/static/RedHatText-Regular.ttf");
+}
+@font-face {
+  font-family: RedHatBold;
+  src: url("assets/fonts/static/RedHatText-Bold.ttf");
+}
+@font-face {
+  font-family: RedHatSemiBold;
+  src: url("assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+* {
+  font-family: RedHat !important;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+body > main {
+  width: inherit;
+  min-height: 92vh;
+  background-color: hsl(20, 50%, 98%);
+  padding: 60px 0 0 0;
+  max-width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+body > main section.products {
+  width: 60%;
+}
+body > main section.products h1.section-heading {
+  font-weight: 700;
+  font-size: 30px;
+}
+body > main section.products div.products-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+body > main section.products div.products-container div.product {
+  width: 31%;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button {
+  position: relative;
+  margin-bottom: 25px;
+  width: 250px;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button img.product-image {
+  width: 100%;
+  border-radius: 6px;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions div.item-counter {
+  background-color: hsl(14, 86%, 42%);
+  border-radius: 50px;
+  padding: 8px 10px;
+  display: flex;
+  gap: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions div.item-counter span {
+  color: white;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions div.item-counter button {
+  background-color: transparent;
+  border: 1px solid hsl(14, 25%, 72%);
+  color: hsl(14, 25%, 72%);
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions div.item-counter button:hover {
+  border-color: white !important;
+  background-color: white;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions div.item-counter button:hover path {
+  fill: hsl(14, 86%, 42%) !important;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions button.add-cart-button {
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid hsl(14, 25%, 72%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions button.add-cart-button:hover {
+  border-color: hsl(14, 86%, 42%) !important;
+}
+body > main section.products div.products-container div.product div.tumbnail-and-cart-button div.cart-actions button.add-cart-button:hover span {
+  color: hsl(14, 86%, 42%);
+}
+body > main section.products div.products-container div.product div.product-details span.tag {
+  color: hsl(12, 20%, 44%);
+}
+body > main section.products div.products-container div.product div.product-details h4.name {
+  margin: 6px 0;
+  font-weight: 600;
+}
+body > main section.products div.products-container div.product div.product-details span.price {
+  color: hsl(14, 86%, 42%);
+  font-weight: 600;
+}
+body > main aside.cart {
+  width: 20%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 0 7px hsla(14, 86%, 42%, 0.24);
+}
+body > main aside.cart h2.cart-heading {
+  color: hsl(14, 86%, 42%);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+body > main aside.cart div.cart-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid hsl(12, 20%, 44%);
+  margin-bottom: 15px;
+}
+body > main aside.cart div.cart-item div.left h4.item-name {
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+body > main aside.cart div.cart-item div.left span.no-of-items {
+  color: hsl(14, 86%, 42%);
+}
+body > main aside.cart div.cart-item div.left span.cost-per-item {
+  margin-left: 8px;
+  color: hsl(7, 20%, 60%);
+}
+body > main aside.cart div.cart-item div.left span.cost-of-total-items {
+  margin-left: 8px;
+  color: hsl(12, 20%, 44%);
+}
+body > main aside.cart div.cart-item div.right {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+body > main aside.cart div.cart-item div.right img {
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 4px;
+  border: 1px solid hsl(14, 25%, 72%);
+}
+body > main aside.cart div.cart-item div.right img:hover {
+  background-color: hsl(12, 20%, 44%);
+}
+body > main aside.cart div.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body > main aside.cart div.total span.total-label {
+  color: hsl(7, 20%, 60%);
+  font-size: 12px;
+}
+body > main aside.cart div.total h2.total-cost {
+  font-size: 20px;
+  font-family: RedHatBold !important;
+}
+body > main aside.cart div.delivery-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  background-color: hsl(13, 31%, 94%);
+  margin-bottom: 20px;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+body > main aside.cart div.delivery-detail p {
+  margin: 0;
+}
+body > main aside.cart button.confirm-button {
+  border: none;
+  background-color: hsl(14, 86%, 42%);
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 0;
+  color: white;
+  border-radius: 50px;
+}
+body > main aside.cart button.confirm-button:hover {
+  background-color: hsl(14, 88%, 34%);
+}
+body > main aside.cart div.empty-cart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+body > main aside.cart div.empty-cart span {
+  font-size: 12px;
+  color: hsl(14, 25%, 72%);
+  font-weight: 500;
+}
+body .dialog {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-out;
+}
+body .dialog .dialog-card {
+  background-color: white;
+  border-radius: 6px;
+  width: 25%;
+  max-height: 500px;
+  animation: scaleup 0.2s ease-out;
+}
+@keyframes scaleup {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body .dialog .dialog-card .dialog-content {
+  padding: 25px 20px;
+}
+body .dialog .dialog-card .dialog-content .heading-and-check {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .dialog .dialog-card .dialog-content .heading-and-check h2 {
+  margin: 0;
+}
+body .dialog .dialog-card .dialog-content .heading-and-check img {
+  width: 30px;
+  height: 30px;
+}
+body .dialog .dialog-card .dialog-content .help-text {
+  font-size: 12px;
+  color: rgb(144, 142, 142);
+}
+body .dialog .dialog-card .dialog-content .order-items-list {
+  background-color: hsl(20, 50%, 98%);
+  padding: 0 15px 15px 15px;
+  border-radius: 5px;
+}
+body .dialog .dialog-card .dialog-content .order-items-list #order-list {
+  height: 276px;
+  overflow: auto;
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item .left .content {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item .left .content img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item .left .content .item-details .name {
+  margin: 0;
+  font-size: 16px;
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item .left .content .item-details .count-and-price {
+  margin-bottom: 0;
+  margin-top: 4px;
+  margin-left: 2px;
+  display: flex;
+  gap: 10px;
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item .left .content .item-details .count-and-price .count {
+  color: hsl(14, 86%, 42%);
+  font-size: 11px;
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item .left .content .item-details .count-and-price .price {
+  color: hsl(12, 20%, 44%);
+  font-size: 11px;
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item .right {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body .dialog .dialog-card .dialog-content .order-items-list .order-item .right h3 {
+  margin: 0;
+  font-size: 14px;
+}
+body .dialog .dialog-card .dialog-content .order-total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+body .dialog .dialog-card .dialog-content .order-total .label {
+  color: hsl(12, 20%, 44%);
+  font-size: 13px;
+}
+body .dialog .dialog-card .dialog-content .order-total .order-cost {
+  margin: 0;
+  font-size: 20px;
+  font-family: RedHatBold !important;
+}
+body .dialog .dialog-card .dialog-content .new-order-btn {
+  background-color: hsl(14, 86%, 42%);
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+body .dialog .dialog-card .dialog-content .new-order-btn:hover {
+  background-color: hsl(14, 88%, 34%);
+}/*# sourceMappingURL=styles.css.map */

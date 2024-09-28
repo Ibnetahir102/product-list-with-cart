@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+  </style>
+</head>
+<body>  
+    <main>
+        <section class="products">
+            <h1 class="section-heading">
+                Desserts
+            </h1>
+
+            <div id="_container" class="products-container">
+                <!-- products will be injected here -->
+            </div>
+        </section>
+
+        <aside class="cart">
+            <section class="cart-details">
+                <h2 class="cart-heading">Your Cart (<span id="cart-count">0</span>)</h2>
+
+                <div style="display: none;" id="non-empty-cart">
+                    <div id="cart-items">
+                        <!-- cart items will be injected here -->
+                    </div>
+    
+                    <div class="total">
+                        <span class="total-label">Order Total</span>
+                        <h2 id="_totalCost" class="total-cost">$00.0</h2>
+                    </div>
+                    
+                    <div class="delivery-detail">
+                        <img src="assets/images/icon-carbon-neutral.svg" alt="">
+                        <p class="detail-text">
+                            This is a <strong>carbon-neutral</strong> delivery
+                        </p>
+                    </div>
+    
+                    <button onclick="showDialog()" class="confirm-button" type="button">Confirm Order</button>
+                </div>
+
+                <div id="empty-cart" class="empty-cart">
+                    <img src="assets/images/illustration-empty-cart.svg" alt="">
+                    <span>Your added items will appear here</span>
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <div style="display: none;" id="_dialog" class="dialog">
+        <main class="dialog-card">
+            <div class="dialog-content">
+                <div class="heading-and-check">
+                    <h2>Order Confirmed</h2>
+                    <img src="assets/images/icon-order-confirmed.svg" alt="">
+                </div>
+
+                <p class="help-text">We hope you enjoyed your food!</p>
+
+                <div class="order-items-list">
+                    <div id="order-list">
+                        <!-- Order items will be injected here -->
+                    </div>
+
+                    <div class="order-total">
+                        <span class="label">
+                            Order Total
+                        </span>
+                        <h2 id="order-cost" class="order-cost">$46.50</h2>
+                    </div>
+                </div>
+
+                <button onclick="hideDialog()" type="button" class="new-order-btn">Start New Order</button>
+            </div>
+        </main>
+    </div>
+    
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="#">Fida ur Rehman</a>.
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html>

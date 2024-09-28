@@ -1,0 +1,401 @@
+@font-face {
+    font-family: RedHat;
+    src: url('assets/fonts/static/RedHatText-Regular.ttf');
+}
+
+@font-face {
+    font-family: RedHatBold;
+    src: url('assets/fonts/static/RedHatText-Bold.ttf');
+}
+
+@font-face {
+    font-family: RedHatSemiBold;
+    src: url('assets/fonts/static/RedHatText-SemiBold.ttf');
+}
+
+* {
+    font-family: RedHat !important;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+
+    & > main {
+        width: inherit;
+        min-height: 92vh;
+        background-color: hsl(20, 50%, 98%);
+        padding: 60px 0 0 0;
+        max-width: 100vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+
+        section.products {
+            width: 60%;
+
+            h1.section-heading {
+                font-weight: 700;
+                font-size: 30px;
+            }
+
+            div.products-container {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding-bottom: 40px;
+
+                div.product {
+                    width: 31%;
+
+                    div.tumbnail-and-cart-button {
+                        position: relative;
+                        margin-bottom: 25px;
+                        width: 250px;
+
+                        img.product-image {
+                            width: 100%;
+                            border-radius: 6px;
+                        }
+
+                        div.cart-actions {
+                            position: absolute;
+                            bottom: -10px;
+                            left: 50%;
+                            transform: translateX(-50%);
+
+                            div.item-counter {
+                                background-color: hsl(14, 86%, 42%);
+                                border-radius: 50px;
+                                padding: 8px 10px;
+                                display: flex;
+                                gap: 20px;
+                                width: -moz-fit-content;
+                                width: fit-content;
+                                
+                                span {
+                                    color: white;
+                                }
+                                
+                                button {
+                                    background-color: transparent;
+                                    border: 1px solid hsl(14, 25%, 72%);
+                                    color: hsl(14, 25%, 72%);
+                                    display: flex;
+                                    align-items: center;
+                                    border-radius: 50px;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        border-color: white !important;
+                                        background-color: white;
+                                        path {fill: hsl(14, 86%, 42%) !important;}
+                                    }
+                                }
+                            }
+
+                            button.add-cart-button {
+                                background-color: white;
+                                padding: 8px 20px;
+                                border-radius: 50px;
+                                border: 1px solid hsl(14, 25%, 72%);
+                                display: flex;
+                                align-items: center;
+                                gap: 4px;
+                                cursor: pointer;
+                                text-wrap: nowrap;
+
+                                &:hover {
+                                    border-color: hsl(14, 86%, 42%) !important;
+                                    span {
+                                        color: hsl(14, 86%, 42%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    div.product-details {
+                        span.tag {
+                            color: hsl(12, 20%, 44%);
+                        }
+
+                        h4.name {
+                            margin: 6px 0;
+                            font-weight: 600;
+                        }
+
+                        span.price {
+                            color: hsl(14, 86%, 42%);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+        aside.cart {
+            width: 20%;
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 0 7px hsl(14deg 86% 42% / 24%);
+
+            h2.cart-heading {
+                color: hsl(14, 86%, 42%);
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+
+            div.cart-item {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 10px;
+                border-bottom: 1px solid hsl(12, 20%, 44%);
+                margin-bottom: 15px;
+
+                div.left {
+                    h4.item-name {
+                        margin-bottom: 6px;
+                        margin-top: 0;
+                    }
+    
+                    span.no-of-items {
+                        color: hsl(14, 86%, 42%);
+                    }
+    
+                    span.cost-per-item {
+                        margin-left: 8px;
+                        color: hsl(7, 20%, 60%);
+                    }
+    
+                    span.cost-of-total-items {
+                        margin-left: 8px;
+                        color: hsl(12, 20%, 44%);
+                    }
+                }
+
+                div.right {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 5px;
+                    img {
+                        border-radius: 50px;
+                        cursor: pointer;
+                        padding: 4px;
+                        border: 1px solid hsl(14, 25%, 72%);
+                        &:hover{background-color: hsl(12, 20%, 44%);}
+                    }
+                }
+            }
+
+            div.total {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span.total-label {
+                    color: hsl(7, 20%, 60%);
+                    font-size: 12px;
+                }
+
+                h2.total-cost {
+                    font-size: 20px;
+                    font-family: RedHatBold !important;
+                }
+            }
+
+            div.delivery-detail {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                width: 100%;
+                background-color: hsl(13, 31%, 94%);
+                margin-bottom: 20px;
+                border-radius: 6px;
+                padding: 10px 0;
+                p{margin: 0;}
+            }
+
+            button.confirm-button {
+                border: none;
+                background-color: hsl(14, 86%, 42%);
+                width: 100%;
+                cursor: pointer;
+                padding: 10px 0;
+                color: white;
+                border-radius: 50px;
+                
+                &:hover{
+                    background-color: hsl(14, 88%, 34%);
+                }
+            }
+
+            div.empty-cart {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 12px;
+                    color: hsl(14, 25%, 72%);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .dialog {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.23);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-out;
+
+        .dialog-card {
+            background-color: white;
+            border-radius: 6px;
+            width: 25%;
+            max-height: 500px;
+            animation: scaleup 0.2s ease-out;
+
+            @keyframes scaleup {
+                0%{transform: scale(0);}
+                100%{transform: scale(1);}
+            }
+            
+            .dialog-content {
+                padding: 25px 20px;
+                
+                .heading-and-check {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h2 {
+                        margin: 0;
+                    }
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                .help-text {
+                    font-size: 12px;
+                    color: rgb(144, 142, 142);
+                }
+
+                .order-items-list {
+                    background-color: hsl(20, 50%, 98%);
+                    padding: 0 15px 15px 15px;
+                    border-radius: 5px;
+
+                    #order-list {
+                        height: 276px;
+                        overflow: auto;
+                    }
+
+                    .order-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 15px 0 15px 0;
+                        border-bottom: 1px solid hsl(13, 31%, 94%);
+
+                        .left .content {
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 5px;
+                            
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 4px;
+                            }
+
+                            .item-details {
+                                .name {
+                                    margin: 0;
+                                    font-size: 16px;
+                                }
+
+                                .count-and-price {
+                                    margin-bottom: 0;
+                                    margin-top: 4px;
+                                    margin-left: 2px;
+                                    display: flex;
+                                    gap: 10px;
+
+                                    .count {
+                                        color: hsl(14, 86%, 42%);
+                                        font-size: 11px;
+                                    }
+
+                                    .price {
+                                        color: hsl(12, 20%, 44%);
+                                        font-size: 11px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .right {
+                            height: fit-content;
+
+                            h3 {margin: 0;font-size: 14px;}
+                        }
+                    }
+                }
+
+                .order-total {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    .label {
+                        color: hsl(12, 20%, 44%);
+                        font-size: 13px;
+                    }
+
+                    .order-cost {
+                        margin: 0;
+                        font-size: 20px;
+                        font-family: RedHatBold !important;
+                    }
+                }
+
+                .new-order-btn {
+                    background-color: hsl(14, 86%, 42%);
+                    border: none;
+                    width: 100%;
+                    padding: 10px 0;
+                    color: white;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    margin-top: 25px;
+                    &:hover {background-color: hsl(14, 88%, 34%);}
+                }
+            }
+        }
+    }
+}

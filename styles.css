@@ -19,6 +19,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
   position: relative;
+  background-color: hsl(20, 50%, 98%);
+  display: flex;
+  justify-content: center;
 }
 body > main {
   width: inherit;
@@ -29,6 +32,7 @@ body > main {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  max-width: 2200px;
   gap: 30px;
 }
 body > main section.products {
@@ -47,11 +51,12 @@ body > main section.products div.products-container {
 }
 body > main section.products div.products-container div.product {
   width: 31%;
+  max-width: 360px;
 }
 body > main section.products div.products-container div.product div.tumbnail-and-cart-button {
   position: relative;
   margin-bottom: 25px;
-  width: 250px;
+  width: 100%;
 }
 body > main section.products div.products-container div.product div.tumbnail-and-cart-button img.product-image {
   width: 100%;
@@ -121,6 +126,7 @@ body > main section.products div.products-container div.product div.product-deta
 }
 body > main aside.cart {
   width: 20%;
+  max-width: 550px;
   background-color: white;
   border-radius: 8px;
   padding: 25px;
@@ -235,6 +241,7 @@ body .dialog {
 }
 body .dialog .dialog-card {
   background-color: white;
+  max-width: 550px;
   border-radius: 6px;
   width: 25%;
   max-height: 500px;
@@ -349,4 +356,40 @@ body .dialog .dialog-card .dialog-content .new-order-btn {
 }
 body .dialog .dialog-card .dialog-content .new-order-btn:hover {
   background-color: hsl(14, 88%, 34%);
+}
+@media (max-width: 1150px) {
+  body main {
+    flex-direction: column-reverse;
+    align-items: center !important;
+  }
+  body main section.products {
+    width: 98% !important;
+  }
+  body main aside.cart {
+    width: 85% !important;
+  }
+  body main .dialog-card {
+    width: 98% !important;
+  }
+  body main div.tumbnail-and-cart-button {
+    width: 100% !important;
+  }
+  body main div.products-container {
+    justify-content: center !important;
+  }
+}
+@media (max-width: 1150px) and (max-width: 500px) {
+  body div.product {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1150px) and (min-width: 513px) and (max-width: 1000px) {
+  body div.product {
+    width: 48% !important;
+  }
+}
+@media (max-width: 1275px) and (min-width: 1150px) {
+  body section.products {
+    width: 68% !important;
+  }
 }/*# sourceMappingURL=styles.css.map */

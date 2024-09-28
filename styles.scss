@@ -22,6 +22,9 @@ body {
     width: 100vw;
     overflow-x: hidden;
     position: relative;
+    background-color: hsl(20, 50%, 98%);
+    display: flex;
+    justify-content: center;
 
     & > main {
         width: inherit;
@@ -32,6 +35,7 @@ body {
         display: flex;
         align-items: flex-start;
         justify-content: center;
+        max-width: 2200px;
         gap: 30px;
 
         section.products {
@@ -51,11 +55,12 @@ body {
 
                 div.product {
                     width: 31%;
+                    max-width: 360px;
 
                     div.tumbnail-and-cart-button {
                         position: relative;
                         margin-bottom: 25px;
-                        width: 250px;
+                        width: 100%;
 
                         img.product-image {
                             width: 100%;
@@ -140,6 +145,7 @@ body {
 
         aside.cart {
             width: 20%;
+            max-width: 550px;
             background-color: white;
             border-radius: 8px;
             padding: 25px;
@@ -269,6 +275,7 @@ body {
 
         .dialog-card {
             background-color: white;
+            max-width: 550px;
             border-radius: 6px;
             width: 25%;
             max-height: 500px;
@@ -396,6 +403,51 @@ body {
                     &:hover {background-color: hsl(14, 88%, 34%);}
                 }
             }
+        }
+    }
+
+    & {
+        @media (max-width: 1150px) {
+            main {
+                flex-direction: column-reverse;
+                align-items: center !important;
+
+                section.products {
+                    width: 98% !important;
+                }
+
+                aside.cart {
+                    width: 85% !important;
+                }
+
+                .dialog-card {
+                    width: 98% !important;
+                }
+
+                div.tumbnail-and-cart-button {
+                    width: 100% !important;
+                }
+
+                div.products-container {
+                    justify-content: center !important;
+                }
+            }
+
+            @media (max-width: 500px) {
+                div.product {
+                    width: 100% !important;
+                }
+            }
+    
+            @media (min-width: 513px) and (max-width: 1000px) {
+                div.product {
+                    width: 48% !important;
+                }
+            }
+        }
+
+        @media (max-width: 1275px) and (min-width: 1150px) {
+            section.products {width: 68% !important;}
         }
     }
 }
